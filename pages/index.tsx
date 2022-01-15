@@ -1,7 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+
+import { Attractions } from '../components/attractions/attractions'
+import { Contacts } from '../components/contacts'
+import { Footer } from '../components/footer/footer'
+import { Header } from '../components/header/header'
+import { Tours } from '../components/tours/tours'
+import { Welcome } from '../components/welcome'
+
 
 const Home: NextPage = () => {
   return (
@@ -12,204 +18,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-
-        <header id="header" className="header">
-          <div className="nav">
-            <img className="logo" src="img/logo 1.svg" alt="" />
-            <ul className="menu">
-              <li>
-                <a href="#welcome" className="link-to">
-                  Главная
-                </a>
-              </li>
-              <li>
-                <a href="#attractions" className="link-to">
-                  Достопремичательности
-                </a>
-              </li>
-              <li>
-                <a href="#tours" className="link-to">
-                  Туры
-                </a>
-              </li>
-              <li>
-                <a href="#contacts" className="link-to">
-                  Контакты
-                </a>
-              </li>
-            </ul>
-            <div className="burger" id="burger_id">
-              <span className="burger__line burger__line_first"></span>
-              <span className="burger__line burger__line_second"></span>
-              <span className="burger__line burger__line_third"></span>
-              <span className="burger__line burger__line_fourth"></span>
-            </div>
-            <div className="burger_menu">
-              <ul>
-                <li>
-                  <a href="#welcome" className="link-to">
-                    Главная
-                  </a>
-                </li>
-                <li>
-                  <a href="#attractions" className="link-to">
-                    Достопремичательности
-                  </a>
-                </li>
-                <li>
-                  <a href="#tours" className="link-to">
-                    Туры
-                  </a>
-                </li>
-                <li>
-                  <a href="#contacts" className="link-to">
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </header>
-
-        <section id="welcome" className="welcome">
-          <div className="welcome-container">
-            <h1 className="welcome-title">Хакасия</h1>
-            <p className="welcome-subtitle">Туристическое Агенство Республики Хакасия</p>
-          </div>
-          <button id="scroll" className="btn_scroll">
-            <a href="#attractions" className="scroll-to"><img src="img/Icon - Go down.svg" alt="" /></a>
-          </button>
-        </section>
-
-        <section id="attractions" className="attractions">
-          <h2>Достопримечательности</h2>
-          <div className="attractions-item">
-            <img className="attractions-item__img" src="img/DJI_0185-Pano 1.jpg" alt="" />
-            <div className="attractions-item__text">
-              <h3>Тропа предков</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. Vivamus id nunc at ante vulputate egestas. Sed varius elit ornare condimentum fermentum. Integer mattis pretium tortor dictum tristique. Donec in congue mauris. Quisque vitae nisi ultricies, efficitur odio vel, porta nulla. Donec porta, mauris nec pharetra mollis, diam lorem luctus velit, nec ultricies nunc quam posuere dui. Donec at nisl lorem. Sed vitae sapien metus. In erat felis, pharetra vitae libero eu, posuere accumsan odio.
-                <br /><br />
-                <span className="hide">Fusce eget mauris ullamcorper mi fermentum ullamcorper. Donec egestas mollis dolor, a dignissim dolor venenatis eu. Suspendisse quis quam laoreet, mattis neque eu, feugiat lectus. Maecenas non urna mollis, ultricies eros vel, ullamcorper risus. Nulla hendrerit venenatis erat, in rhoncus quam placerat nec. Ut feugiat nisi in mattis lacinia. Morbi eleifend, neque eget dapibus scelerisque, ligula nisl malesuada odio, et imperdiet metus mi pretium enim.</span></p>
-            </div>
-          </div>
-          <div className="attractions-item swap">
-            <img className="attractions-item__img" src="img/DJI_0185-Pano 1.jpg" alt="" />
-            <div className="attractions-item__text margin_swap">
-              <h3>Приисковый</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. Vivamus id nunc at ante vulputate egestas. Sed varius elit ornare condimentum fermentum. Integer mattis pretium tortor dictum tristique. Donec in congue mauris. Quisque vitae nisi ultricies, efficitur odio vel, porta nulla. Donec porta, mauris nec pharetra mollis, diam lorem luctus velit, nec ultricies nunc quam posuere dui. Donec at nisl lorem. Sed vitae sapien metus. In erat felis, pharetra vitae libero eu, posuere accumsan odio.
-                <br></br>
-                <span className="hide">Fusce eget mauris ullamcorper mi fermentum ullamcorper. Donec egestas mollis dolor, a dignissim dolor venenatis eu. Suspendisse quis quam laoreet, mattis neque eu, feugiat lectus. Maecenas non urna mollis, ultricies eros vel, ullamcorper risus. Nulla hendrerit venenatis erat, in rhoncus quam placerat nec. Ut feugiat nisi in mattis lacinia. Morbi eleifend, neque eget dapibus scelerisque, ligula nisl malesuada odio, et imperdiet metus mi pretium enim.</span></p>
-            </div>
-          </div>
-          <div className="attractions-item">
-            <img className="attractions-item__img" src="img/DJI_0185-Pano 1.jpg" alt="" />
-            <div className="attractions-item__text">
-              <h3>Сундуки</h3>
-              <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. Vivamus id nunc at ante vulputate egestas. Sed varius elit ornare condimentum fermentum. Integer mattis pretium tortor dictum tristique. Donec in congue mauris. Quisque vitae nisi ultricies, efficitur odio vel, porta nulla. Donec porta, mauris nec pharetra mollis, diam lorem luctus velit, nec ultricies nunc quam posuere dui. Donec at nisl lorem. Sed vitae sapien metus. In erat felis, pharetra vitae libero eu, posuere accumsan odio.
-                <br /><br />
-                <span className="hide">Fusce eget mauris ullamcorper mi fermentum ullamcorper. Donec egestas mollis dolor, a dignissim dolor venenatis eu. Suspendisse quis quam laoreet, mattis neque eu, feugiat lectus. Maecenas non urna mollis, ultricies eros vel, ullamcorper risus. Nulla hendrerit venenatis erat, in rhoncus quam placerat nec. Ut feugiat nisi in mattis lacinia. Morbi eleifend, neque eget dapibus scelerisque, ligula nisl malesuada odio, et imperdiet metus mi pretium enim.</span></p>
-            </div>
-          </div>
-        </section>
-
-        <section id="tours" className="tours">
-          <div className="container">
-            <h2>Туры</h2>
-            <div className="list">
-              <article className="tours-item">
-                <div className="tours-item__gradient" ></div>
-                <h4>Название</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur pretium orci at rutrum pellentesque. </p>
-                <p>От <b>10 000</b> р.</p>
-                <button className="buy_btn">Купить</button>
-              </article>
-
-              <article className="tours-item">
-                <div className="tours-item__gradient" ></div>
-                <h4>Название</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur pretium orci at rutrum pellentesque. </p>
-                <p>От <b>10 000</b> р.</p>
-                <button className="buy_btn">Купить</button>
-              </article>
-
-              <article className="tours-item">
-                <div className="tours-item__gradient" ></div>
-                <h4>Название</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur pretium orci at rutrum pellentesque. </p>
-                <p>От <b>10 000</b> р.</p>
-                <button className="buy_btn">Купить</button>
-              </article>
-
-              <article className="tours-item">
-                <div className="tours-item__gradient" ></div>
-                <h4>Название</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur pretium orci at rutrum pellentesque. </p>
-                <p>От <b>10 000</b> р.</p>
-                <button className="buy_btn">Купить</button>
-              </article>
-
-              <article className="tours-item">
-                <div className="tours-item__gradient" ></div>
-                <h4>Название</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur pretium orci at rutrum pellentesque. </p>
-                <p>От <b>10 000</b> р.</p>
-                <button className="buy_btn">Купить</button>
-              </article>
-
-              <article className="tours-item">
-                <div className="tours-item__gradient" ></div>
-                <h4>Название</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur pretium orci at rutrum pellentesque. </p>
-                <p>От <b>10 000</b> р.</p>
-                <button className="buy_btn">Купить</button>
-              </article>
-            </div>
-            <div className="button_more_position">
-              <button className="button_more" >
-                Больше туров
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <section id="contacts" className="contacts">
-          <h2>Контакты</h2>
-          <ul className="contacts__data">
-            <li>655019, Республика Хакасия, г. Абакан, пр. Ленина, д. 67</li>
-            <li>
-              8 (3902) 22-53-35
-              <br />
-              8 (3902) 24-30-71
-            </li>
-            <li>kancler@vskhakasia.ru</li>
-          </ul>
-          <iframe className="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5b2d03754473e3b59ed4fe7c28dfdc7964a8360aeeb7785ae1430a4f091e3aff&amp;source=constructor" frameBorder="0"></iframe>
-        </section>
-
-        <footer className="footer">
-          <ul className="footer__menu">
-            <li>Меню</li>
-            <li><a href="#welcome">Главная</a></li>
-            <li><a href="#attractions">Достопремичательности</a></li>
-            <li><a href="#tours">Туры</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-          </ul>
-          <ul className="footer__contacts">
-            <li>Контакты</li>
-            <li>655019, Республика Хакасия, г. Абакан, пр. Ленина, д. 67</li>
-            <li>Справочная служба: 8 (3902) 22-53-35, факс: 8 (3902) 24-30-71</li>
-            <li>Электронная почта: kancler@vskhakasia.ru</li>
-          </ul>
-          <span className="footer__copirate">
-            Официальный сайт Агенства Туризма Республики Хакасия  ©  2021
-          </span>
-        </footer>
+        <Header />
+        <Welcome />
+        <Attractions />
+        <Tours />
+        <Contacts />
+        <Footer />
       </body>
     </div >
   )
